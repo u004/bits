@@ -95,11 +95,14 @@ public class BitVec {
 
 	@Override
 	public final boolean equals(Object obj) {
-		if (obj instanceof BitVec) {
-			BitVec other = (BitVec) obj;
+		if (this == obj) {
+			return true;
+		}
 
-			return super.equals(obj)
-					|| Long.compareUnsigned(this.value, other.value) == 0;
+		if (obj instanceof BitVec) {
+			BitVec that = (BitVec) obj;
+
+			return Long.compareUnsigned(this.value, that.value) == 0;
 		}
 
 		return false;
