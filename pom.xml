@@ -53,8 +53,6 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 
-        <annotations.version>23.0.0</annotations.version>
-
         <javadoc.stylesheet.filePath>${project.basedir}/src/main/resources/javadoc-drakula.css</javadoc.stylesheet.filePath>
 
         <!-- Maven Plugin Versions -->
@@ -64,15 +62,6 @@
         <maven.gpg.version>3.0.1</maven.gpg.version>
         <maven.staging.version>1.6.13</maven.staging.version>
     </properties>
-
-    <dependencies>
-        <dependency>
-            <groupId>org.jetbrains</groupId>
-            <artifactId>annotations</artifactId>
-            <version>${annotations.version}</version>
-            <optional>true</optional>
-        </dependency>
-    </dependencies>
 
     <build>
         <plugins>

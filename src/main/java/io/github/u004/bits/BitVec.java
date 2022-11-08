@@ -16,7 +16,7 @@
 
 package io.github.u004.bits;
 
-import org.jetbrains.annotations.NotNull;
+import java.util.Objects;
 
 /**
  * A bit vector.
@@ -68,7 +68,9 @@ public class BitVec {
 	 *
 	 * @see BitVar#get(long, int, long)
 	 */
-	public final long get(@NotNull BitVar bitVar) {
+	public final long get(BitVar bitVar) {
+		Objects.requireNonNull(bitVar);
+
 		return bitVar.get(this.value);
 	}
 
@@ -80,7 +82,9 @@ public class BitVec {
 	 *
 	 * @see BitVar#set(long, int, long, long)
 	 */
-	public final void set(@NotNull BitVar bitVar, long value) {
+	public final void set(BitVar bitVar, long value) {
+		Objects.requireNonNull(bitVar);
+
 		this.value = bitVar.set(this.value, value);
 	}
 
